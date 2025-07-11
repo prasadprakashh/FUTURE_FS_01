@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +31,7 @@
       align-items: center;
       padding: 20px 80px;
       background: #262626;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -126,13 +127,25 @@
       transform: scale(1.05);
     }
 
-    .hero img {
-      width: 380px;
-      border-radius: 12px;
-      border: 8px solid #6c3df4;
-      box-shadow: 0 0 30px rgba(108, 61, 244, 0.4);
+    /* NEW: Hero Photo Styling */
+    .hero-photo {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #6c3df4;
+      padding: 15px;
+      box-shadow: 0 0 30px rgba(108, 61, 244, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-top: 30px;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      border-radius: 50%;
     }
 
     /* Section Title */
@@ -175,7 +188,7 @@
       border-radius: 8px;
       font-weight: 600;
       font-size: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
       width: 250px;
     }
@@ -213,7 +226,7 @@
       padding: 30px;
       border-radius: 10px;
       width: 300px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease;
       color: #e0e0e0;
     }
@@ -288,6 +301,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation Bar -->
@@ -313,14 +327,17 @@
         <a href="prasad_resume.pdf" download>Download Resume</a>
       </div>
     </div>
-    <img src="profile.jpg" alt="Prasad Image" />
+    <div class="hero-photo">
+      <img src="profile.png" alt="Prasad Image" />
+    </div>
   </section>
 
   <!-- About Section -->
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
-      Hi! I’m Prasad, passionate about tech and innovation. I’ve completed my diploma in Computer Science Engineering and love building creative digital solutions.
+      Hi! I’m Prasad, passionate about tech and innovation. I’ve completed my diploma in Computer Science Engineering
+      and love building creative digital solutions.
     </div>
   </section>
 
@@ -347,10 +364,14 @@
   <section id="services">
     <h2 class="section-title">Services</h2>
     <div class="services-list">
-      <div class="service-card">Web Development<p>Responsive websites for modern devices.</p></div>
-      <div class="service-card">App Development<p>Android apps with Java/XML.</p></div>
-      <div class="service-card">UI/UX Design<p>Modern interfaces & smooth flow.</p></div>
-      <div class="service-card">API Integration<p>Connecting systems together.</p></div>
+      <div class="service-card">Web Development<p>Responsive websites for modern devices.</p>
+      </div>
+      <div class="service-card">App Development<p>Android apps with Java/XML.</p>
+      </div>
+      <div class="service-card">UI/UX Design<p>Modern interfaces & smooth flow.</p>
+      </div>
+      <div class="service-card">API Integration<p>Connecting systems together.</p>
+      </div>
     </div>
   </section>
 
@@ -380,16 +401,25 @@
   <section id="contact">
     <h2 class="section-title">Contact Me</h2>
     <div class="contact-content">
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      <form action="https://formsubmit.co/el/xuzinu" method="POST" class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+  <!-- Optional hidden fields -->
+  <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://prasadprakashh.github.io/FUTURE_FS_01/thankyou.html">
+
+
+  <button type="submit">Send Message</button>
+</form>
+
+
       <p style="margin-top: 40px;">
         📞 <a href="tel:9356467029">9356467029</a><br>
         📧 <a href="mailto:prasadprakash2610@gmail.com">prasadprakash2610@gmail.com</a><br>
-        <a href="https://www.linkedin.com/in/prasadchougule" target="_blank" style="margin-right: 15px; color: #6c3df4;">
+        <a href="https://www.linkedin.com/in/prasadchougule" target="_blank"
+          style="margin-right: 15px; color: #6c3df4;">
           <i class="fab fa-linkedin fa-lg"></i> LinkedIn
         </a>
         <a href="https://www.instagram.com/prasadprakash_/" target="_blank" style="color: #6c3df4;">
@@ -430,4 +460,5 @@
     });
   </script>
 </body>
+
 </html>
